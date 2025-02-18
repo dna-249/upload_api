@@ -4,6 +4,17 @@ const multer = require("multer")
 const port = 3000
 
 const app = express()
+const corsConfig = {
+    origin : ["*"],
+    credential : true,
+    methods : ["GET","POST"]
+}
+
+app.options("",cors(corsConfig))
+app.use(cors(corsConfig))
+app.use(express.json())
+
+
 const storage = multer.diskStorage({ destination : "uploads/",
     filename:(req, file, cb)=> {
 cb(null,`${file.originalname}`)
