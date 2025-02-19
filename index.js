@@ -33,7 +33,7 @@ app.post("/post",upload.single("file"),(req,res)=>{
     console.log(req.file)
 })
 app.get("/get",(req,res)=>{
-    res.sent("hello alhamdulillah")
+    res.send("hello alhamdulillah")
 })
 
 app.listen(port,()=>{
