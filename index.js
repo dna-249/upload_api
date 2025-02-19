@@ -32,6 +32,9 @@ app.get("/",(req,res)=>{
 app.post("/post",upload.single("file"),(req,res)=>{
     console.log(req.file)
 })
+app.get("/get",(req,res)=>{
+    res.sent("hello alhamdulillah")
+})
 
 app.listen(port,()=>{
     console.log("server is running")
