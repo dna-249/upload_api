@@ -16,12 +16,12 @@ app.use(cors(corsConfig))
 app.use(express.json())
 
 
-const storage = multer.diskStorage({ destination : "upload/",
+const storage = multer.diskStorage({ destination : "uploads/",
     filename:(req, file, cb)=> {
 cb(null,`${file.originalname}`)
 }})
 
-app.use("/file", express.static("upload/"))
+app.use("/file", express.static("uploads/"))
 const upload = multer({storage:storage})
 
 
