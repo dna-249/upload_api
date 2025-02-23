@@ -30,7 +30,7 @@ app.get("/",(req,res)=>{
   res.send("hello from backend by DNA")
 })
 app.post("/post",upload.single("file"),(req,res)=>{
-    console.log(req.file)
+    res.json("successfull uploaded")
 })
 app.get("/get",(req,res)=>{
     res.send("hello alhamdulillah")
