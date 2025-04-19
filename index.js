@@ -5,7 +5,7 @@ const port = 3000
 
 const app = express()
 const corsConfig = {
-    origin : ["https://cloud-school-lifecamp.vercel.app"],
+    origin : ["https://myshop-dna.vercel.app"],
     credential : true,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         
